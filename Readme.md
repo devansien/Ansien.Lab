@@ -1,7 +1,7 @@
 # Ansien Lab
 
 This project consists of:
-* Collection of methods to just try out.
+* Collection of garbage scripts to try out.
 
 ## Description:
 

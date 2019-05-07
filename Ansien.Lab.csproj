@@ -6,6 +6,8 @@
     <Authors>devansien</Authors>
     <Company>Ansien</Company>
     <Version>0.0.1</Version>
+    <Description>A collection of garbage scripts to try out</Description>
+    <Product>Ansien Lab</Product>
   </PropertyGroup>
 
 </Project>
