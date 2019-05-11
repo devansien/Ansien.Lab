@@ -30,6 +30,15 @@ namespace Ansien.Lab
             //else
             //    Console.WriteLine("Failed to parse a number");
 
+            // * sagemaker testing
+            //string result = Encoding.UTF8.GetString(await TestSageMakerEndpoint());
+            //Console.WriteLine(result);
+
+            Console.ReadKey();
+        }
+
+        static async Task<byte[]> TestSageMakerEndpoint()
+        {
             string awsAccessKey = "";
             string awsSecretKey = "";
 
@@ -44,10 +53,7 @@ namespace Ansien.Lab
             AmazonSageMakerRuntimeClient client = new AmazonSageMakerRuntimeClient(awsAccessKey, awsSecretKey, RegionEndpoint.USEast1);
             InvokeEndpointResponse response = await client.InvokeEndpointAsync(request);
 
-            string result = Encoding.UTF8.GetString(response.Body.ToArray());
-
-            Console.WriteLine(result);
-            Console.ReadKey();
+            return response.Body.ToArray();
         }
     }
 }

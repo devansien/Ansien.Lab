@@ -1,13 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <Authors>devansien</Authors>
     <Company>Ansien</Company>
+    <Authors>devansien</Authors>
     <Version>0.0.1</Version>
-    <Description>A collection of garbage scripts to try out</Description>
     <Product>Ansien Lab</Product>
+    <Description>A collection of garbage scripts to try out</Description>
   </PropertyGroup>
 
   <ItemGroup>
