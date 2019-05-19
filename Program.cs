@@ -12,7 +12,7 @@ namespace Ansien.Lab
     {
         static async Task Main(string[] args)
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.OutputEncoding = Encoding.UTF8;
 
             //Media media = new Media();
             //media["Name"] = "Ansien";
@@ -34,6 +34,14 @@ namespace Ansien.Lab
             //string result = Encoding.UTF8.GetString(await TestSageMakerEndpoint());
             //Console.WriteLine(result);
 
+
+            int n = ProcessTestRequest((int a) =>
+            {
+                a = a + 1;
+                return a;
+            });
+
+            Console.WriteLine(n);
             Console.ReadKey();
         }
 
@@ -54,6 +62,15 @@ namespace Ansien.Lab
             InvokeEndpointResponse response = await client.InvokeEndpointAsync(request);
 
             return response.Body.ToArray();
+        }
+
+
+        static int ProcessTestRequest(Func<int, int> handler)
+        {
+            int a = 1;
+            Console.WriteLine(a);
+
+            return handler(a);
         }
     }
 }
